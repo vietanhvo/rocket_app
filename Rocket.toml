@@ -1,0 +1,2 @@
+[global.databases]
+mysql_logs = { url = "mysql://root:Admin123%21%3F@localhost/diesel_demo" }
