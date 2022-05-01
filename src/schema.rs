@@ -3,6 +3,6 @@ table! {
         id -> Integer,
         name -> Varchar,
         email -> Varchar,
-        created_at -> Varchar,
+        created_at -> Timestamp,
     }
 }

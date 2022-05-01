@@ -24,7 +24,7 @@ impl RustaceanRepository {
         Self::find(c, last_id)
     }
 
-    pub fn update(c: &MysqlConnection, rustacean: Rustacean) -> QueryResult<Rustacean> {
+    pub fn update(c: &MysqlConnection, rustacean: UpdatedRustacean) -> QueryResult<Rustacean> {
         diesel::update(rustaceans::table.find(rustacean.id))
             .set((
                 rustaceans::name.eq(rustacean.name.to_owned()),

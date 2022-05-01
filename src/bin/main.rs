@@ -67,7 +67,7 @@ async fn update_rustacean(
     _id: i32,
     _auth: BasicAuth,
     conn: DbConnection,
-    rustacean: Json<Rustacean>,
+    rustacean: Json<UpdatedRustacean>,
 ) -> Result<Value, status::Custom<Value>> {
     conn.run(move |c| {
         RustaceanRepository::update(c, rustacean.into_inner())
