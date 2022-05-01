@@ -1,0 +1,35 @@
+# Get all rustatceans
+http://127.0.0.1:8000
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+GET /rustaceans
+
+# Get a single rustacean by id
+http://127.0.0.1:8000
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+GET /rustaceans/2
+
+# Create a new rustacean
+http://127.0.0.1:8000
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+Content-Type: application/json
+POST /rustaceans
+{
+    "name": "John Doe 3",
+    "email": "john@doe3.com"
+}
+
+# Update a rustacean
+http://127.0.0.1:8000
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+Content-Type: application/json
+PUT /rustaceans/2
+{
+    "id": 2,
+    "name": "Modified John Doe 2",
+    "email": "johnMod@doe2.com"
+}
+
+# Delete a rustacean
+http://127.0.0.1:8000
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+DELETE /rustaceans/2
