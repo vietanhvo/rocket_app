@@ -2,9 +2,9 @@
 extern crate diesel;
 extern crate serde;
 
-mod auth;
-
 pub mod models;
 pub mod schema;
+pub mod repositories;
 
+mod auth;
 pub use auth::BasicAuth;

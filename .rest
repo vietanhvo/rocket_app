@@ -14,22 +14,22 @@ Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
 Content-Type: application/json
 POST /rustaceans
 {
-    "name": "John Doe 3",
-    "email": "john@doe3.com"
+    "name": "John Doe 4",
+    "email": "john@doe4.com"
 }
 
 # Update a rustacean
 http://127.0.0.1:8000
 Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
 Content-Type: application/json
-PUT /rustaceans/2
+PUT /rustaceans/4
 {
-    "id": 2,
-    "name": "Modified John Doe 2",
-    "email": "johnMod@doe2.com"
+    "id": 4,
+    "name": "Modified John Doe 4",
+    "email": "johnMod@doe4.com"
 }
 
 # Delete a rustacean
 http://127.0.0.1:8000
 Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
-DELETE /rustaceans/2
+DELETE /rustaceans/4
