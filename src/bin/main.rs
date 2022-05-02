@@ -3,9 +3,9 @@ extern crate rocket;
 #[macro_use]
 extern crate diesel_migrations;
 
-use rocket::Build;
 use rocket::fairing::AdHoc;
 use rocket::http::Status;
+use rocket::Build;
 use rocket_app::models::*;
 use rocket_app::repositories::*;
 use rocket_app::BasicAuth;
@@ -101,7 +101,9 @@ fn unprocessable_entity() -> Value {
     json!("Unprocessable Entity!")
 }
 
-async fn run_db_migrations(rocket: rocket::Rocket<Build>) -> Result<rocket::Rocket<Build>, rocket::Rocket<Build>> {
+async fn run_db_migrations(
+    rocket: rocket::Rocket<Build>,
+) -> Result<rocket::Rocket<Build>, rocket::Rocket<Build>> {
     DbConnection::get_one(&rocket)
         .await
         .expect("Failed to retrieve database connection")
@@ -134,6 +136,8 @@ async fn main() -> Result<(), rocket::Error> {
             "Database Migrations",
             run_db_migrations,
         ))
-        .ignite().await?
-        .launch().await
+        .ignite()
+        .await?
+        .launch()
+        .await
 }

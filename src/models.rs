@@ -1,6 +1,6 @@
 use super::schema::rustaceans;
-use serde::{Deserialize, Serialize};
 use chrono::NaiveDateTime;
+use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Queryable, AsChangeset)]
 pub struct Rustacean {

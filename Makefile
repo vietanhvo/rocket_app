@@ -9,6 +9,9 @@ build: wsl.sync
 run: wsl.sync
 	cd $(BUILD_DIR) && cargo run
 
+check: wsl.sync
+	cd $(BUILD_DIR) && cargo check --message-format=json
+
 wsl.sync:
 	mkdir -p $(BUILD_DIR)
 	rsync -av $(SOURCE_DIR)/ $(BUILD_DIR)/ --exclude .git --exclude target
