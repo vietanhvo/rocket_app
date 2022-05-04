@@ -1,2 +1,11 @@
+[default]
+port = 8000
+
+[debug]
+address = "127.0.0.1"
+
+[release]
+address = "0.0.0.0"
+
 [global.databases]
-mysql_db = { url = "mysql://root:Admin123%21%3F@localhost/diesel_demo" }
+mysql_db = { url = "mysql://root:Admin123%21%3F@db/diesel_demo" }
