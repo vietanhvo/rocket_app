@@ -7,7 +7,7 @@ WORKDIR ./rocket-app
 COPY ./Cargo.toml ./Cargo.toml
 RUN cargo build --release
 RUN rm src/*.rs
-# Build binary
+# Build release binary
 ADD . ./
 
 RUN rm ./target/release/deps/rocket_app*

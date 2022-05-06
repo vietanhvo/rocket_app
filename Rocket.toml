@@ -7,5 +7,7 @@ address = "127.0.0.1"
 [release]
 address = "0.0.0.0"
 
+# Docker: @db
+# Local: @localhost
 [global.databases]
 mysql_db = { url = "mysql://root:Admin123%21%3F@db/diesel_demo" }

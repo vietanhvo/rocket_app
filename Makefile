@@ -1,3 +1,7 @@
+# WARNING: THIS FILE IS USED TO SPEED UP THE PROCESS IN THE WINDOWS FILE SYSTEM
+# IN WSL2 (/mnt/...). YOU CAN MOVE THE ROOT FOLDER TO THE LINUX FILE SYSTEM (~/...)
+# IGNORE IT. 
+
 SOURCE_DIR = $(PWD)
 # `notdir` returns the part after the last `/`
 # so if the source was "/some/nested/project", only "project" remains
